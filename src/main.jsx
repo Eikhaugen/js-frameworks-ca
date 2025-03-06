@@ -22,10 +22,6 @@ const routes = createBrowserRouter([
         element: <h1>Cart</h1>,
       },
       {
-        path: "/checkout",
-        element: <h1>Checkout</h1>,
-      },
-      {
         path: "/success",
         element: <h1>Checkout Success</h1>,
       },
