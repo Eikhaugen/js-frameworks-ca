@@ -7,7 +7,21 @@ const useCartStore = create(
       cart: [],
       addToCart: (product) => {
         const currentCart = get().cart;
-        set({ cart: [...currentCart, product] });
+        const existingProduct = currentCart.find(item => item.id === product.id);
+
+        if (existingProduct) {
+          set({
+            cart: currentCart.map(item =>
+              item.id === product.id
+                ? { ...item, quantity: item.quantity + 1 }
+                : item
+            )
+          });
+        } else {
+          set({
+            cart: [...currentCart, { ...product, quantity: 1 }]
+          });
+        }
       },
       removeFromCart: (id) => {
         const currentCart = get().cart;
