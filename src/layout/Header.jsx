@@ -9,7 +9,7 @@ function Header() {
     <>
       <header className="flex items-center justify-between p-4 bg-white shadow-md relative">
         <Link to="/">
-        <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
   Shop till you drop
 </span>
 
