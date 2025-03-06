@@ -2,6 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./layout/index.jsx";
+import Home from "./pages/Home/Home";
+import Product from './pages/Product/Product.jsx';
 import './index.css'
 
 const routes = createBrowserRouter([
@@ -11,11 +13,11 @@ const routes = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: <h1>Home</h1>,
+        element: <Home />,
       },
       {
         path: "product/:id",
-        element: <h1>Product page</h1>,
+        element: <Product />,
       },
       {
         path: "/cart",
