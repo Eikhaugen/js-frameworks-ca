@@ -1,5 +1,7 @@
+// src/layout/Header.jsx
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import CartIcon from "../components/CartIcon";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,10 +11,9 @@ function Header() {
     <>
       <header className="flex items-center justify-between p-4 bg-white shadow-md relative">
         <Link to="/">
-        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-  Shop till you drop
-</span>
-
+          <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+            Shop till you drop
+          </span>
         </Link>
 
         <form action="" className="hidden md:block flex-1 mx-4">
@@ -24,9 +25,7 @@ function Header() {
         </form>
 
         <div className="flex items-center space-x-4">
-          <Link to="cart/" className="text-xl">
-            <i className="fa-solid fa-cart-shopping"></i>
-          </Link>
+          <CartIcon />
 
           <button
             className="md:hidden text-xl"

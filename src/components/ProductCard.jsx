@@ -17,8 +17,8 @@ function ProductCard({ product }) {
         <span className="text-lg font-semibold">
           $
           {product.discountedPrice
-            ? product.discountedPrice.toFixed(2)
-            : product.price.toFixed(2)}
+            ? product.discountedPrice
+            : product.price}
         </span>
         <span className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
           View Product
