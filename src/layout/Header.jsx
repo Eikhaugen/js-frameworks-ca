@@ -1,4 +1,3 @@
-// src/layout/Header.jsx
 import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import CartIcon from "../components/CartIcon";
