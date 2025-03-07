@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Layout } from "./layout/index.jsx";
 import Home from "./pages/Home/Home";
 import Product from './pages/Product/Product.jsx';
+import Cart from './pages/Cart/Cart.jsx';
+import CheckoutSuccess from './pages/CheckoutSuccess/CheckoutSuccess.jsx';
+import Contact from './pages/Contact/Contact.jsx';
+import Search from './pages/Search/Search.jsx';
 import './index.css'
 
 const routes = createBrowserRouter([
@@ -21,15 +25,19 @@ const routes = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <h1>Cart</h1>,
+        element: <Cart />,
       },
       {
         path: "/success",
-        element: <h1>Checkout Success</h1>,
+        element: <CheckoutSuccess />,
       },
       {
         path: "/contact",
-        element: <h1>Contact</h1>,
+        element: <Contact />,
+      },
+      {
+        path: "/search",
+        element: <Search />,
       },
     ]
   },
