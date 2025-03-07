@@ -27,6 +27,14 @@ const useCartStore = create(
         const currentCart = get().cart;
         set({ cart: currentCart.filter((item) => item.id !== id) });
       },
+      updateQuantity: (id, quantity) => {
+        const currentCart = get().cart;
+        set({
+          cart: currentCart.map(item =>
+            item.id === id ? { ...item, quantity } : item
+          )
+        });
+      },
       clearCart: () => set({ cart: [] }),
     }),
     {
