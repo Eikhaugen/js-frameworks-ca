@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import CartIcon from "../components/CartIcon";
 import SearchModal from "../components/SearchModal";
@@ -25,9 +25,9 @@ function Header() {
     if (searchQuery.trim() !== "") {
       navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
       setIsSearchModalOpen(false);
+      setIsMobileSearchOpen(false);
     }
   };
-  
 
   const closeSearchModal = () => {
     setIsSearchModalOpen(false);
@@ -95,7 +95,7 @@ function Header() {
       </header>
 
       {isMobileSearchOpen && (
-        <div className="bg-white p-4 shadow-md md:hidden">
+        <div className="bg-white p-4 shadow-md md:hidden z-50">
           <form onSubmit={handleSearchSubmit}>
             <input
               type="text"

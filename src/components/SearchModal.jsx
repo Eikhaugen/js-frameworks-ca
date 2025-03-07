@@ -18,7 +18,7 @@ function SearchModal({ query, onClose }) {
   }, [query, products]);
 
   return (
-    <div className="fixed inset-0 z-40 pt-20 flex items-start justify-center p-4">
+    <div className="fixed inset-0 z-40 pt-36 md:pt-20 flex items-start justify-center p-4">
       <div
         className="absolute inset-0 bg-gray-800 opacity-50"
         onClick={onClose}
