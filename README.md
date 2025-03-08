@@ -82,6 +82,5 @@ Start the Vite development server:
 
        npm run dev
 
-By default, the application will be available at [http://localhost:3000](http://localhost:3000).
 
 
